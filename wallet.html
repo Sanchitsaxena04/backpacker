@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Backpacker List</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://thebackpackerlist.com.au/assets/fontawesome/css/all.css">
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/croppie-master/croppie.css">
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/croppie-master/demo/prism.css">
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/croppie-master/demo/demo.css">
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://thebackpackerlist.com.au/assets/css/custom.css">
+   
+    <link rel="stylesheet" href="https://thebackpackerlist.com.au/assets/css/responsive.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+
+
+
+<style>
+    #nav-tabContent .upload-file-btn {
+
+        position: relative;
+
+        overflow: hidden;
+
+        background: #ffc000;
+
+        color: #f6f6f6;
+
+        padding: 10px 20px;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        -webkit-border-radius: 0px;
+
+        -moz-border-radius: 0px;
+
+        border-radius: 0px;
+
+        text-align: center;
+
+        display: inline-block;
+
+    }
+
+
+
+    #nav-tabContent .upload-file-btn input[type=file] {
+
+        position: absolute;
+
+        width: 100%;
+
+        height: 165%;
+
+        top: -25px;
+
+        left: 0;
+
+        opacity: 0;
+
+        cursor: pointer;
+
+    }
+
+    #additionalLicenses {
+
+        width: 100%;
+
+    }
+
+    .modal-busy {
+
+        position: fixed;
+
+        z-index: 999;
+
+        height: 100%;
+
+        width: 100%;
+
+        top: 0;
+
+        left: 0;
+
+        background-color: Black;
+
+        filter: alpha(opacity=60);
+
+        opacity: 0.6;
+
+        -moz-opacity: 0.8;
+
+    }
+
+    .center-busy {
+
+        z-index: 1000;
+
+        margin: 50px auto;
+
+        padding: 0px;
+
+        width: 602px;
+
+        filter: alpha(opacity=100);
+
+        opacity: 1;
+
+        -moz-opacity: 1;
+
+    }
+
+    .center-busy img {
+
+        height: 600px;
+
+        width: 600px;
+
+    }
+</style>
+
+<style>
+    
+
+    .pay_btn_yellow:hover{
+        border:2px solid #1C87C7; color:black; background: whitesmoke; outline:0;
+    }
+
+    .tab_pay1{
+        width:180px; height:50px; background:#fff; border-radius:10px; border:2px solid #1C87C7; cursor:pointer; background: #1C87C7; margin-right: 20px; color: #fff; position: relative;
+    }
+
+    .tab_pay2{
+        width:180px; height:50px; background:#fff; border-radius:10px; border:2px solid #1C87C7; cursor:pointer; background: #fff; margin-right: 20px; color: #000; position: relative;
+    }
+
+    .tab_pay1_name{
+        position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);
+    }
+
+</style>
+
+<body>
+
+    <main class="body-main">
+
+        <section class="header-section p-0">
+
+            <div class="container-fluid pr-lg-5 pr-4 pl-0">
+
+                <nav style="margin-left: -12px" class="navbar navbar-expand-lg navbar-light">
+
+                    <div class="container-fluid p-0">
+
+                        <!-- <a class="navbar-brand logo-main" href="#">
+
+                            <img src="assets/images/header-logo.png" alt="logo">
+
+                        </a> -->
+
+                        <a href="index.html">
+
+                            <img src="https://thebackpackerlist.com.au/assets/images/new_logo01.png" style="width:300px;" alt="logo">
+
+                        </a>
+
+
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+                            <span class="navbar-toggler-icon"></span>
+
+
+
+                        </button>
+
+
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+
+
+                                <li class="nav-item">
+
+
+
+                                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+
+
+
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+
+
+
+                                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+                                        BACKPACKERS
+
+
+
+                                    </a>
+
+
+
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+
+                                        <li><a class="dropdown-item active" href="backpacker-registration.html">Register
+                                                Now</a></li>
+
+
+
+                                        <li><a class="dropdown-item" href="how-it-works.html">How it Works</a></li>
+
+
+
+                                    </ul>
+
+
+
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+
+
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+                                        EMPLOYERS
+
+
+
+                                    </a>
+
+
+
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+
+                                        <li><a class="dropdown-item" href="employers-registration.html">Register Now</a>
+                                        </li>
+
+
+
+                                        <li><a class="dropdown-item" href="how-it-works.html">How it Works</a></li>
+
+
+
+                                        <li><a class="dropdown-item" href="#">Buy access</a></li>
+
+
+
+                                    </ul>
+
+
+
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+
+
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+                                        ABOUT US
+
+
+
+                                    </a>
+
+
+
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+
+                                        <li><a class="dropdown-item" href="about-us.html">ABOUT US</a></li>
+
+
+
+                                        <li><a class="dropdown-item" href="terms-condition.html">Terms &amp;
+                                                Conditions</a></li>
+
+
+
+                                    </ul>
+
+
+
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+
+
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+                                        CONTACT US
+
+
+
+                                    </a>
+
+
+
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+
+                                        <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+
+
+
+                                    </ul>
+
+
+
+                                </li>
+
+
+
+                                <li class="nav-item dropdown">
+
+
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
+                                        Log In
+
+
+
+                                    </a>
+
+
+
+                                    <ul class="dropdown-menu right-0" aria-labelledby="navbarDropdown">
+
+
+
+                                        <li><a class="dropdown-item" href="backpacker-login.html">Backpacker Login</a>
+                                        </li>
+
+
+
+                                        <li><a class="dropdown-item" href="backpacker-login.html">Employer Login</a>
+                                        </li>
+
+
+
+                                    </ul>
+
+
+
+                                </li>
+
+
+
+                            </ul>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </nav>
+
+
+
+            </div>
+
+
+
+        </section>
+
+        <section class="main-body-content">
+
+            <!-- <section class="top-pages-banner">
+
+                <div class="banner-image-con">
+
+                    <img src="https://thebackpackerlist.com.au/assets/images/banner1.jpg" alt="">
+
+                </div>
+
+                <div class="banner-text-con">
+
+                    <div class="banner-text container">
+
+                        <h1>BACKPACKER<br>
+
+                            EDIT WORK DETAILS</h1>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="registration-section backpacker-registration">
+
+                <div class="container">
+
+                    <form action="" id="backpackersRegistrationForm3">
+
+                        <div class="registration-blue-bar">
+
+                            <h1 class="site-title">WORK PROFILE</h1>
+
+                        </div>
+
+                        <div class="registration-container">
+
+                            <div class="registration-form">
+
+
+
+                                <div class="tab-content px-4 py-3" id="nav-tabContent">
+
+                                    <div class="tab-pane fade show active" id="nav-Personal" role="tabpanel"
+                                        aria-labelledby="nav-Personal-tab nav-Personal-tab2">
+
+                                        <div class="row">
+
+                                            <div class="col-lg-12">
+
+                                                <div id="backpackerMessage"></div>
+
+                                                <div id="backpackerSuccMessage"></div>
+
+                                                <div id="backpackerErrorMessage"></div>
+
+                                            </div>
+
+                                            <div class="col-lg-12">
+
+                                                <input type="hidden" name="country_name001" id="country_name001">
+
+                                                <input type="hidden" name="firstName001" id="firstName001">
+
+                                                <input type="hidden" name="lastName001" id="lastName001">
+
+                                                <input type="hidden" name="emailMain001" id="emailMain001">
+
+                                                <input type="hidden" name="mobileMain001" id="mobileMain001">
+
+                                                <input type="hidden" name="cpassword001" id="cpassword001">
+
+                                                <input type="hidden" name="pimage001" id="pimage001">
+
+                                                <input type="hidden" name="backpackerCategory001"
+                                                    id="backpackerCategory001">
+
+                                                <input type="hidden" name="backpackerSearchParameter001"
+                                                    id="backpackerSearchParameter001">
+
+                                                <input type="hidden" name="backpackerFormattedAddress001"
+                                                    id="backpackerFormattedAddress001">
+
+                                                <input type="hidden" name="backpackerLatitude001"
+                                                    id="backpackerLatitude001">
+
+                                                <input type="hidden" name="backpackerLongitude001"
+                                                    id="backpackerLongitude001">
+
+                                                <input type="hidden" name="backpackerSubCategories001"
+                                                    id="backpackerSubCategories001">
+
+
+
+                                            </div>
+
+                                            <div class="col-lg-12">
+
+                                                <div class="mb-3">
+
+                                                    <label for="coverLetter" class="form-label">Cover Letter</label>
+
+                                                    <p class="label-msg">Using 1000 words or less, describe yourself and
+                                                        your qualities to potential employers.</p>
+
+                                                    <textarea name="coverLetter" id="coverLetter" class="form-control"
+                                                        cols="30" rows="6" maxlength="1000"></textarea>
+
+                                                    <span class="error-msg" id="coverLetter_error"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-12" id="pdf-section">
+                                                <iframe src="" id="mypdfshow" width="100%" height="300px"
+                                                    style="border: none;"></iframe>
+                                            </div>
+
+
+
+                                            <div class="col-lg-12">
+
+                                                <div class="mb-3">
+
+                                                    <label for="resume" class="form-label">Professional Resume</label>
+
+                                                    <p class="label-msg">Employers will also want to see your experience
+                                                        and skills. Upload your resume below to be displayed on your
+                                                        profile. </p>
+
+                                                    <div class="text-center">
+
+                                                        <div class="upload-file-btn" id="when_upload">
+
+                                                            <span id="when_file_upload1">UPLOAD YOUR RESUME</span><span
+                                                                class="d-none" id="when_file_upload2">File
+                                                                Uploaded</span><br />
+
+                                                            <input type="file" name="resume" id="resume"
+                                                                onchange="convertToBase64();" accept=".pdf">
+
+                                                            <span class="error-msg" id="resume_error"></span>
+
+                                                        </div>
+
+                                                        <input type="hidden" id="resumeFileValue"
+                                                            name="resumeFileValue">
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-lg-12">
+
+                                                <div class="mb-3">
+
+                                                    <label for="additionalLicenses"
+                                                        class="form-label custom-btn-group-title">ADDITIONAL
+                                                        LICENSES</label>
+
+                                                    <div class="btn-group custom-btn-group" role="group"
+                                                        aria-label="Basic checkbox toggle button group"
+                                                        id="additionalLicenses">
+
+
+
+                                                    </div>
+
+                                                    <span class="error-msg" id="licenses_error"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="registration-blue-bar text-center">
+
+                            <button type="submit" class="btn btn-warning">
+
+                                SAVE PROFILE
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section> -->
+
+
+            <section class="top-pages-banner" style="width:100%; height:350px;">
+                <div class="banner-image-con">
+                    <img id="back" src="image.png" alt="background-image" style="width:100% ; height: 100%;">
+                </div>
+
+                <div class="banner-text-con">
+                    <div class="banner-text">
+                        <h1 id="banner">PREMIUM SUBSCRIPTION</h1>
+                        
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-center align-items-center">
+                    
+                </div>
+
+            </section>
+
+
+            <section class="registration-section backpacker-registration mb-2">
+
+                <div class="container">
+                   <form action="javascript:void(0)" id="backpackersAccountDetailsUpdateForm">
+                   <div class="registration-blue-bar" >
+                    <h1 class="site-title">Active Plans</h1>
+                   </div>
+                   <div class="registration-container" >
+                    <div class="registration-form">
+                        <div class="tab content px-4 py-3" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-Personal" role="tabpanel" aria-labelledby="nav-Personal-tab nav-Personal-tab 2">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="empMessage"></div>
+                                        <div class="empSuccMessage"></div>
+                                        <div class="empErrorMessage"></div>
+
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+
+                                                <div id="box-content">
+
+                                                    <!--
+                                                              <div id="img-wallet">
+                                                        <img id="wallet" src="wallet.png" style="width:100px;" alt="" >
+                                                    </div>
+
+                                                    <div class="currentBalance">
+                                                        <h2 style="text-align:center; ">Current Balance</h>
+                                                        <div class="coin-balance">
+                                                            <div class="coins"><img id="coin" src="coins.png" alt="coins" style="height: 55px; width: 55px ;">
+                                                            </div>
+                                                                
+                                                         <div id="cost"><h2 style="font-size: 40px">1000</h2></div>
+                                                        </div>
+                                                            
+                                                    </div>
+
+                                                    <div id="detail">
+                                                        <label style="text-align: center" for="country" class="form-label"><h3>Plan details</h3></label>
+                                                        <h3>1 month pack</h3>                           
+                                                        <p>Plan Expires on 09 Aug, 2022 12:08 PM</p>
+                                                    </div>
+                                                    
+                                                    -->
+
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                   
+                </form>
+
+                </div>
+
+
+                <div id="plans" class="container">
+                    <form action="javascript:void(0)" id="backpackersAccountDetailsUpdateForm">
+                    <div class="registration-blue-bar" >
+                     <h1 class="site-title">Plans For Employer</h1>
+                    </div>
+                    <div class="registration-container" >
+                     <div class="registration-form">
+                         <div class="tab content px-4 py-3" id="nav-tabContent">
+                             <div class="tab-pane fade show active" id="nav-Personal" role="tabpanel" aria-labelledby="nav-Personal-tab nav-Personal-tab 2">
+                                 <div class="row">
+                                     <div class="col-lg-12">
+                                         <div class="empMessage"></div>
+                                         <div class="empSuccMessage"></div>
+                                         <div class="empErrorMessage"></div>
+ 
+                                         <div class="col-lg-12 pack_history">
+                                             <div class="mb-3">
+
+                                                     <div class="text-center mx-auto d-flex justify-content-center align-items-center mt-4 mb-3">
+                                                        <div class="tab_pay1 " id="pack_id">
+                                                           <div class="h4 text-uppercase tab_pay1_name">Packs</div>
+                                                        </div>
+                                         
+                                                        <div class="tab_pay2" id="history_id">
+                                                            <div class="h4 text-uppercase tab_pay1_name">History</div>
+                                                         </div>
+                                    
+                                    
+                                                       </div>
+ 
+                                                 </div>
+                                                 
+                                             </div>
+                                         </div>
+
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mx-auto" >
+                                        <div class="container-fluid" >
+                                            <div  class="row">
+            
+                                                <!--
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                   <h3>Pack for 1 DAY - $29</h3>
+                                                   <p></p>
+                                                   <button class="px-2 pay_btn">Buy Now</button>
+                                                </div>
+            
+                                                 <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card>
+                                                    <h3>Pack for 7 DAYS - $89</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque velit similique maxime? Harum facere reiciendis repellendus hic autem illum recusandae!</p>
+                                                    <button class="px-2 pay_btn">Buy Now</button>
+                                                 </div>
+            
+                                                 <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                    <h3>Pack for 1 MONTH - $295</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque velit similique maxime? Harum facere reiciendis repellendus hic autem illum recusandae!</p>
+                                                    <button class="px-2 pay_btn">Buy Now</button>
+                                                 </div>
+                                                 -->
+                                                                                                   
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-12 mx-auto d-none" id="history_div">
+                                        <div class="container-fluid">
+                                            <div class="row" id="history_fetch">
+
+                                                                       
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-success text-white px-3 py-1">Success</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p  class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">sumitn581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+                                                          
+                                                           
+                                                       </div>
+                                                   </div>
+                                                </div>
+            
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-danger text-white px-3 py-1">Failed</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">sumitn581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>   
+                                                       </div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-12  mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-danger text-white px-3 py-1">Failed</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p  class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">sumitn581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+                                                          
+                                                           
+                                                       </div>
+                                                   </div>
+                                                </div> 
+
+                                                -->
+                                             
+            
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+
+                            <div class="container-fluid" id="pack_div">
+                                <div class="row" id="fetch_data1">
+                                    <div class="col-lg-6">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus ipsum delectus facilis voluptas obcaecati nobis dignissimos iure, eveniet iusto.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus ipsum delectus facilis voluptas obcaecati nobis dignissimos iure, eveniet iusto.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </section>
+            
+                    </section>
+                         </div>
+                     </div>
+                    </div>
+                    
+
+                    
+
+
+                 </form>
+ 
+                 </div>
+
+
+
+
+
+         
+
+
+                 <!--
+
+                    Employer Plan box design
+                 -->
+
+
+
+                 <div id="plans" class="container">
+                    <form action="javascript:void(0)" id="backpackersAccountDetailsUpdateForm">
+                    <div class="registration-blue-bar" >
+                     <h1 class="site-title">Plans for Backpacker</h1>
+                    </div>
+                    <div class="registration-container" >
+                     <div class="registration-form">
+                         <div class="tab content px-4 py-3" id="nav-tabContent">
+                             <div class="tab-pane fade show active" id="nav-Personal" role="tabpanel" aria-labelledby="nav-Personal-tab nav-Personal-tab 2">
+                                 <div class="row">
+                                     <div class="col-lg-12">
+                                         <div class="empMessage"></div>
+                                         <div class="empSuccMessage"></div>
+                                         <div class="empErrorMessage"></div>
+ 
+                                         <div class="col-lg-12">
+                                             <div class="mb-3">
+
+                                                     <div class="text-center mx-auto d-flex justify-content-center align-items-center mt-4 mb-3">
+                                                        <div class="tab_pay1 " id="Employer_pack_id">
+                                                           <div class="h4 text-uppercase tab_pay1_name">Packs</div>
+                                                        </div>
+                                         
+                                                        <div class="tab_pay2" id="Employer_history_id">
+                                                            <div class="h4 text-uppercase tab_pay1_name">History</div>
+                                                         </div>
+                                    
+                                    
+                                                       </div>
+ 
+                                                 </div>
+                                                 
+                                             </div>
+                                         </div>
+
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="container">
+
+                                <div class="row" id="testThis">
+                                    <div class="col-12 mx-auto mb-3" >
+                                        <div class="container-fluid">
+                                            <div class="row">
+            
+                                                <!--
+
+                                                
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                   <h3>Pack for 1 DAY - $29</h3>
+                                                   <p></p>
+                                                   <button class="px-2 pay_btn">Buy Now</button>
+                                                </div>
+            
+                                                 <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                    <h3>Pack for 7 DAYS - $89</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque velit similique maxime? Harum facere reiciendis repellendus hic autem illum recusandae!</p>
+                                                    <button class="px-2 pay_btn">Buy Now</button>
+                                                 </div>
+            
+                                                 <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                    <h3>Pack for 1 MONTH - $295</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque velit similique maxime? Harum facere reiciendis repellendus hic autem illum recusandae!</p>
+                                                    <button class="px-2 pay_btn">Buy Now</button>
+                                                 </div>
+                                                  -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+            
+                                    <div class="col-12 mx-auto d-none" id="Employer_history_div">
+                                        <div class="container-fluid">
+                                            <div class="row">
+            
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-success text-white px-3 py-1">Success</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p  class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">sanchit581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+                                                          
+                                                           
+                                                       </div>
+                                                   </div>
+                                                </div>
+            
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-danger text-white px-3 py-1">Failed</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">sumitn581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+                                                          
+                                                           
+                                                       </div>
+                                                   </div>
+                                                </div>
+            
+                                                <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card position-relative">
+                                                    <div style="position:absolute; right:40px; top:15px;" class="bg-danger text-white px-3 py-1">Failed</div>
+                                                   <div class="container-fluid">
+                                                       <div class="row">
+                                                           <div class="col-12">
+                                                               <p  class="shortMessage">Short message</p>
+                                                           </div>
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Purchased subscription type </h4>
+                                                             <p class="p-0 m-0">Basic</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6">
+                                                            <h4  class="p-0 m-0">Paypal account details</h4>
+                                                             <p class="p-0 m-0">user581@gmail.com</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+            
+                                                           <div class="col-lg-6 mt-2">
+                                                            <h4  class="p-0 m-0">Date of purchase </h4>
+                                                             <p class="p-0 m-0">06-06-2022</p>
+                                                           </div>
+                                                          
+                                                           
+                                                       </div>
+                                                   </div>
+                                                </div>                                  
+            
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                              
+                          
+                            <div class="container-fluid" id="Employer_pack_div">
+                                <div class="row" id="fetch_data">
+
+                                    <!--
+                                 <div class="col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos atque assumenda, ratione asperiores nihil alias repellendus eaque quam ipsam optio?
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                    <div class="col-lg-6">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 shadow-lg mt-4 py-3 px-4 pay_card">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos atque assumenda, ratione asperiores nihil alias repellendus eaque quam ipsam optio?
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                    -->
+                                  
+                                </div>
+                            </div>
+
+
+                        </section>
+            
+                    </section>
+                         </div>
+                     </div>
+                    </div>
+                    
+                 </form>
+ 
+                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+
+            <div class="top-footer-section">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-5 col-md-12">
+
+                            <div class="footer-des">
+
+                                <div class="footer-logo">
+
+                                    <a href="#">
+
+                                        <img src="assets/images/logo.png" alt="logo">
+
+                                    </a>
+
+                                </div>
+
+                                <p>The Backpacker List is Australian largest list of Backpackers looking for work in
+                                    Australia. Launching in March 2022 with more than 50,000 backpackers registered, the
+                                    List will be the most comprehensive list of available labour in Australia. </p>
+
+                                <ul>
+
+                                    <li><span class="icon"><i class="fas fa-map-marker-alt"></i></span>Adelaide Hills,
+                                        South Australia</li>
+
+                                    <li><span class="icon"><i class="fas fa-phone-alt"></i></span>041 041 6655</li>
+
+                                    <li><span class="icon"><i class="fas fa-envelope"></i></span>matt@thekingsmen.net.au
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-5">
+
+                            <div class="useful-link-content">
+
+                                <h3 class="footer-menu-title">Useful Links</h3>
+
+                                <ul class="footer-menu-link">
+
+                                    <li><a href="#" class="active">Worker Registration</a></li>
+
+                                    <li><a href="#">Employer Registration</a></li>
+
+                                    <li><a href="#">Available Jobs</a></li>
+
+                                    <li><a href="#">Available Workers</a></li>
+
+                                    <li><a href="#">Our Values</a></li>
+
+                                    <li><a href="contact-us.html">Contact Us</a></li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 pl-4">
+
+                            <h3 class="footer-menu-title">Popular Backpackers</h3>
+
+                            <div class="popular-job-con">
+
+                                <div class="popular-jobs row">
+
+                                    <div class="popular-jobs-img col-md-3 col-sm-3 col-3">
+
+                                        <img src="assets/images/aed46e159cd0886f2f42976dd57a0dc8u2vYt.jpg" alt=""
+                                            style="max-width: 55px;">
+
+                                    </div>
+
+                                    <div class="popular-jobs-text col-md-9 col-sm-9 col-9">
+
+                                        <h4>KAI</h4>
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="popular-jobs row">
+
+                                    <div class="popular-jobs-img col-md-3 col-sm-3 col-3">
+
+                                        <img src="assets/images/34b7c5f4f51e5cd868045fb5de32eb1aKTxMI.jpg" alt=""
+                                            style="max-width: 55px;">
+
+                                    </div>
+
+                                    <div class="popular-jobs-text col-md-9 col-sm-9 col-9">
+
+                                        <h4>LUCAS</h4>
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="popular-jobs row">
+
+                                    <div class="popular-jobs-img col-md-3 col-sm-3 col-3">
+
+                                        <img src="assets/images/j4.jpg" alt="" style="max-width: 55px;">
+
+                                    </div>
+
+                                    <div class="popular-jobs-text col-md-9 col-sm-9 col-9">
+
+                                        <h4>SADHANA</h4>
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="popular-jobs row">
+
+                                    <div class="popular-jobs-img col-md-3 col-sm-3 col-3">
+
+                                        <img src="assets/images/U.jpg" alt="" style="max-width: 55px;">
+
+                                    </div>
+
+                                    <div class="popular-jobs-text col-md-9 col-sm-9 col-9">
+
+                                        <h4>VYKINTAS</h4>
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="popular-jobs row">
+
+                                    <div class="popular-jobs-img col-md-3 col-sm-3 col-3">
+
+                                        <img src="assets/images/bedaa1ec61beddcb1aba974c1248b5d0aJwO0.jpg" alt=""
+                                            style="max-width: 55px;">
+
+                                    </div>
+
+                                    <div class="popular-jobs-text col-md-9 col-sm-9 col-9">
+
+                                        <h4>EMILIO</h4>
+
+                                        <span></span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-lg-12">
+
+                            <div class="newsletter-content">
+
+                                <h3 class="footer-menu-title">Newsletter</h3>
+
+                                <p class="newsletter-text">Simply join our email database and get sent weekly emails
+                                    with profiles of the available tradies wanting to connect with you. This information
+                                    is FREE.</p>
+
+                                <form action="" method="post">
+
+                                    <div class="newsletter-form">
+
+                                        <input type="email" class="form-control" id="newsletterEmail1"
+                                            placeholder="Your Email" aria-describedby="emailHelp">
+
+                                        <button class="btn btn-warning">Submit</button>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="copyright-section">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+
+                            <p>Copyright © <a href="#">The Backpacker List</a>. All Rights Reserved</p>
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-2 col-sm-2 col-12">
+
+                            <ul>
+
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="Successmsg">
+
+        <div class="modal-dialog " role="document">
+
+            <div class="modal-content" style="margin-top:26% !important">
+
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Success Message</h4>
+
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+
+                    </button> -->
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <p>
+
+                                Thank you for completing your full registration and creating your first job ad. You will
+                                be able to come back and log into the site and start searching for travellers within in
+                                the next 3 to 5 days. We will message you when this will be live. Welcome to the
+                                Backpacker List
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary"
+                        onclick="$('#Successmsg').modal('hide'); window.location.href='/backpacker-registration.html';"
+                        data-dismiss="modal">OK</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="modal-busy" id="loader" style="display: none">
+
+        <div class="center-busy" id="test-git">
+
+            <img alt="" src="assets/images/output-onlinegiftools.gif" />
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://thebackpackerlist.com.au/assets/js/jquery.js"></script>
+
+    <script src="https://thebackpackerlist.com.au/assets/js/bootstrap.min.js"></script>
+
+    <!-- <script src="assets/js/backpackers_work_profile_registration.js"></script> -->
+
+    <script>
+
+        var api_url = 'https://api.thebackpackerlist.com.au/api/';
+
+
+        function myFunction() {
+
+            document.getElementById("Successmsg").style.marginTop = "0px";
+
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+        var data_licences = [];
+        $(document).ready(function () {
+
+            var is_emp_id = window.localStorage.getItem('is_employer');
+            //var emp_id = window.localStorage.getItem('employer_id');
+            var user_ido = window.localStorage.getItem('user_id');
+            $('#back_id').val(user_ido);
+            var token_login = window.localStorage.getItem('token');
+            var user_pic = window.localStorage.getItem('user_pic');
+
+
+            // if (is_emp_id && user_ido && token_login) {
+            //     $('#get_data_backpacker_id_token').val(token_login);
+            //     $('#get_data_backpacker_id').val(user_ido);
+            // } else {
+            //     window.location.href = "https://thebackpackerlist.com.au/backpacker-login.html";
+            // }
+
+            //Country API
+        });
+
+
+
+    
+    </script>
+
+    <script>
+        $('#pack_id').on('click',function(){
+           $('#pack_div').removeClass('d-none');
+           $('#history_div').addClass('d-none');
+           $('#pack_id').addClass('tab_pay1');
+           $('#pack_id').removeClass('tab_pay2');
+
+           $('#history_id').addClass('tab_pay2');
+           $('#history_id').removeClass('tab_pay1');
+        });
+
+        $('#history_id').on('click',function(){
+           $('#pack_div').addClass('d-none');
+           $('#history_div').removeClass('d-none');
+           $('#pack_id').addClass('tab_pay2');
+           $('#pack_id').removeClass('tab_pay1');
+
+           $('#history_id').addClass('tab_pay1');
+           $('#history_id').removeClass('tab_pay2');
+        });
+
+
+
+        // for Employer plan box
+
+
+        $('#Employer_pack_id').on('click',function(){
+           $('#Employer_pack_div').removeClass('d-none');
+           $('#Employer_history_div').addClass('d-none');
+           $('#Employer_pack_id').addClass('tab_pay1');
+           $('#Employer_pack_id').removeClass('tab_pay2');
+
+           $('#Employer_history_id').addClass('tab_pay2');
+           $('#Employer_history_id').removeClass('tab_pay1');
+        });
+
+
+
+        $('#Employer_history_id').on('click',function(){
+           $('#Employer_pack_div').addClass('d-none');
+           $('#Employer_history_div').removeClass('d-none');
+           $('#Employer_pack_id').addClass('tab_pay2');
+           $('#Employer_pack_id').removeClass('tab_pay1');
+
+           $('#Employer_history_id').addClass('tab_pay1');
+           $('#Employer_history_id').removeClass('tab_pay2');
+        });
+    </script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
